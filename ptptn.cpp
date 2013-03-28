@@ -40,13 +40,16 @@ cout<<"****************************************"<<endl;
 cout<<endl;
 
 int i;
-	cout<<"Bulan"<<"\t"<<"Jumlah Dibayar"<<"\t"<<"Jumlah Sebelum Pembayaran"<<"\t"<<"Baki Hutang"<<endl;
+//	cout<<setfill('*')<<"\t\t"<<"Jadual Pembayaran"<<"\t\t"<<endl;
+	cout<<"Bulan"<<"\t"<<"Jumlah Dibayar"<<"\t"<<"Jumlah Sebelum Pembayaran"<<"\t"<<"Baki Hutang"<<"\t"<<"Jumlah Untung Bank"<<endl;
 	
 	for (i=1;i<=tempoh;i++)
 	{
 //	string bulan[12]={"Januari","Februari","Mac","April","Mei","Jun","Julai","Ogos","September","Oktober","November","Disember"};	
 //	cout<<bulan[i-1]<<"\t\t"<<bayar_balik<<"\t\t"<<(total_untung_bank-untung_bank)*baki_bulan*untung_sebulan<<endl;
-	cout<<i<<"\t\t"<<bayar_balik<<"\t\t"<<total_untung_bank<<"\t\t\t"<<(total_untung_bank-bayar_balik)<<endl;
+
+	cout<<i<<"\t\t"<<bayar_balik<<"\t\t"<<total_untung_bank<<"\t\t\t"<<(total_untung_bank-bayar_balik)<<"\t\t"<<total_untung_bank*untung_sebulan<<endl;
+
 	total_untung_bank=total_untung_bank-bayar_balik;
 	}
 
