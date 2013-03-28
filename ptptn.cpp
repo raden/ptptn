@@ -27,7 +27,8 @@ cin>>bayar_balik;
 
 untung_bank=hutang*peratus_bayaran;
 total_untung_bank=hutang+(hutang*peratus_bayaran);
-tempoh=total_untung_bank/bayar_balik;
+//tempoh=(total_untung_bank-bayar_balik)/bayar_balik;
+tempoh=(total_untung_bank)/bayar_balik;
 
 cout<<endl;
 cout<<"*********CETAK LAPORAN******************"<<endl<<endl;
@@ -40,6 +41,7 @@ cout<<"****************************************"<<endl;
 cout<<endl;
 
 int i;
+double faedah;
 //	cout<<setfill('*')<<"\t\t"<<"Jadual Pembayaran"<<"\t\t"<<endl;
 	cout<<"Bulan"<<"\t"<<"Jumlah Dibayar"<<"\t"<<"Jumlah Sebelum Pembayaran"<<"\t"<<"Baki Hutang"<<"\t"<<"Jumlah Untung Bank"<<endl;
 	
@@ -47,9 +49,10 @@ int i;
 	{
 //	string bulan[12]={"Januari","Februari","Mac","April","Mei","Jun","Julai","Ogos","September","Oktober","November","Disember"};	
 //	cout<<bulan[i-1]<<"\t\t"<<bayar_balik<<"\t\t"<<(total_untung_bank-untung_bank)*baki_bulan*untung_sebulan<<endl;
+//	cout<<i<<"\t\t"<<bayar_balik<<"\t\t"<<hutang<<"\t\t\t"<<(hutang-bayar_balik)<<"\t\t"<<hutang*untung_sebulan<<endl;
 
-	cout<<i<<"\t\t"<<bayar_balik<<"\t\t"<<hutang<<"\t\t\t"<<(hutang-bayar_balik)<<"\t\t"<<hutang*untung_sebulan<<endl;
-
+	cout<<i<<"\t\t"<<bayar_balik<<"\t\t"<<hutang+faedah<<"\t\t\t"<<(hutang-bayar_balik)<<"\t\t"<<hutang*untung_sebulan<<endl;
+	faedah=hutang*untung_sebulan;
 	hutang-=bayar_balik;
 	}
 
