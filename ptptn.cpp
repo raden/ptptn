@@ -26,15 +26,17 @@ cout<<endl;
 cout<<"Masukkan nilai bayar balik kepada bank setiap bulan"<<endl;
 cin>>bayar_balik;
 
-untung_bank=hutang+(hutang*untung_sebulan);
-tempoh=untung_bank/bayar_balik;
-total_untung_bank=hutang*untung_sebulan*tempoh;
+untung_bank=hutang*peratus_bayaran;
+total_untung_bank=hutang+(hutang*peratus_bayaran);
+tempoh=total_untung_bank/bayar_balik;
+//total_untung_bank=hutang*untung_sebulan*tempoh;
 
 cout<<endl<<endl;
 cout<<"*********CETAK LAPORAN******************"<<endl<<endl;
 cout<<"Nilai hutang: "<<hutang<<endl;
-cout<<"Nilai hutang+keuntungan bank: "<<hutang+total_untung_bank<<endl;
-cout<<"Jumlah keuntungan bank ialah: "<<total_untung_bank<<endl;
+//cout<<"Nilai hutang+keuntungan bank: "<<hutang+total_untung_bank<<endl;
+cout<<"Nilai hutang+keuntungan bank: "<<total_untung_bank<<endl;
+cout<<"Jumlah keuntungan bank ialah: "<<untung_bank<<endl;
 cout<<"Tempoh bayar balik ialah: "<<tempoh<<" bulan"<<endl;
 cout<<endl;
 cout<<"****************************************"<<endl;
