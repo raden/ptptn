@@ -1,5 +1,5 @@
 #include<iostream>
-
+#include<iomanip>
 using namespace std;
 
 int main()
@@ -22,7 +22,6 @@ cin>>untung;
 peratus_bayaran=untung/100;
 untung_sebulan=peratus_bayaran/12;
 
-cout<<endl;
 cout<<"Masukkan nilai bayar balik kepada bank setiap bulan"<<endl;
 cin>>bayar_balik;
 
@@ -30,7 +29,7 @@ untung_bank=hutang*peratus_bayaran;
 total_untung_bank=hutang+(hutang*peratus_bayaran);
 tempoh=total_untung_bank/bayar_balik;
 
-cout<<endl<<endl;
+cout<<endl;
 cout<<"*********CETAK LAPORAN******************"<<endl<<endl;
 cout<<"Nilai hutang: "<<hutang<<endl;
 cout<<"Nilai hutang+keuntungan bank: "<<total_untung_bank<<endl;
@@ -38,6 +37,18 @@ cout<<"Jumlah keuntungan bank ialah: "<<untung_bank<<endl;
 cout<<"Tempoh bayar balik ialah: "<<tempoh<<" bulan"<<endl;
 cout<<endl;
 cout<<"****************************************"<<endl;
+cout<<endl;
+
+int i;
+	cout<<"Bulan"<<"\t"<<"Jumlah Dibayar"<<"\t"<<"Jumlah Sebelum Pembayaran"<<"\t"<<"Baki Hutang"<<endl;
+	
+	for (i=1;i<=tempoh;i++)
+	{
+//	string bulan[12]={"Januari","Februari","Mac","April","Mei","Jun","Julai","Ogos","September","Oktober","November","Disember"};	
+//	cout<<bulan[i-1]<<"\t\t"<<bayar_balik<<"\t\t"<<(total_untung_bank-untung_bank)*baki_bulan*untung_sebulan<<endl;
+	cout<<i<<"\t\t"<<bayar_balik<<"\t\t"<<total_untung_bank<<"\t\t\t"<<(total_untung_bank-bayar_balik)<<endl;
+	total_untung_bank=total_untung_bank-bayar_balik;
+	}
 
 return 0;
 
