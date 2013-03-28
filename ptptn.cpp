@@ -48,9 +48,9 @@ int i;
 //	string bulan[12]={"Januari","Februari","Mac","April","Mei","Jun","Julai","Ogos","September","Oktober","November","Disember"};	
 //	cout<<bulan[i-1]<<"\t\t"<<bayar_balik<<"\t\t"<<(total_untung_bank-untung_bank)*baki_bulan*untung_sebulan<<endl;
 
-	cout<<i<<"\t\t"<<bayar_balik<<"\t\t"<<total_untung_bank<<"\t\t\t"<<(total_untung_bank-bayar_balik)<<"\t\t"<<total_untung_bank*untung_sebulan<<endl;
+	cout<<i<<"\t\t"<<bayar_balik<<"\t\t"<<hutang<<"\t\t\t"<<(hutang-bayar_balik)<<"\t\t"<<hutang*untung_sebulan<<endl;
 
-	total_untung_bank=total_untung_bank-bayar_balik;
+	hutang-=bayar_balik;
 	}
 
 return 0;
